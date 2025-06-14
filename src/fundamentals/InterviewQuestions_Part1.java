@@ -195,6 +195,28 @@ public class InterviewQuestions_Part1 {
 		}
 
 	}
+	
+	//write a program to check whether the number is Armstrong number or not.
+	// 153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+	public static void checkArmstrongNumber(int number) {
+		
+		int tempNum = number;
+		int sum = 0;
+		
+		while (tempNum > 0) {
+			int remainder = tempNum % 10;
+			sum = sum + (remainder*remainder*remainder); // 27,  27 + 125 = 152, 1 + 152 = 153
+			tempNum = tempNum / 10; 
+		}
+		
+		if(sum == number) {
+			System.out.println(number+" Number is an Armstrong Number");
+		}else {
+			System.out.println(number+" Number is not an Armstrong Number");
+		}
+		
+	}
+	
 
 	public static void main(String[] args) {
 
@@ -219,7 +241,9 @@ public class InterviewQuestions_Part1 {
 
 //		checkNumberPalindrome(121);
 
-		checkStringPalindrome("malayalam");
+//		checkStringPalindrome("malayalam");
+		
+		checkArmstrongNumber(153);
 	}
 
 }
