@@ -2,7 +2,8 @@ package assignments.gana;
 
 public class Assignment1 {
 
-	//Write a reusable method to find  out duplicate characters count from a string
+	//Write a reusable method to find Vowels count in a given string
+	// Ex: Hello Java -> eoaa -> count: 4
 	
 	public static void main(String[] args) {
 		
