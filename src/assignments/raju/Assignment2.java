@@ -16,6 +16,5 @@ public class Assignment2 {
 	public static void main(String[] args) {
 		System.out.println("-------------print unique Characters from the string------------");
 		printUniqueCharactersFromString("malayalam");
-
 	}
 }
