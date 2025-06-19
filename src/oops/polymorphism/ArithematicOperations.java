@@ -1,16 +1,16 @@
-package oops.inheritance;
+package oops.polymorphism;
 
-public class Calculator {
+public class ArithematicOperations {
 
 	void addition(int a, int b) {
 		System.out.println(a + b);
 	}
 
-	void subtraction(int a, int b) {
+	static void subtraction(int a, int b) {
 		System.out.println(a - b);
 	}
 
-	void multiplication(int a, int b) {
+	final void multiplication(int a, int b) {
 		System.out.println(a * b);
 	}
 
