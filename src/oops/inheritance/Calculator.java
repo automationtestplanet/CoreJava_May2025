@@ -1,12 +1,12 @@
-package oops.encapsulation;
+package oops.inheritance;
 
 public class Calculator {
 
-	public void addition(int a, int b) {
+	void addition(int a, int b) {
 		System.out.println(a + b);
 	}
 
-	protected void subtraction(int a, int b) {
+	void subtraction(int a, int b) {
 		System.out.println(a - b);
 	}
 
@@ -14,7 +14,7 @@ public class Calculator {
 		System.out.println(a * b);
 	}
 
-	private void division(int a, int b) {
+	void division(int a, int b) {
 		System.out.println(a / b);
 	}
 }

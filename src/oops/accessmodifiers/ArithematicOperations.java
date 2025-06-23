@@ -1,16 +1,15 @@
-package oops.encapsulation;
+package oops.accessmodifiers;
 
-public class Calculator {
-
+public class ArithematicOperations {
 	public void addition(int a, int b) {
 		System.out.println(a + b);
 	}
 
-	protected void subtraction(int a, int b) {
+	void subtraction(int a, int b) {
 		System.out.println(a - b);
 	}
 
-	void multiplication(int a, int b) {
+	protected void multiplication(int a, int b) {
 		System.out.println(a * b);
 	}
 
