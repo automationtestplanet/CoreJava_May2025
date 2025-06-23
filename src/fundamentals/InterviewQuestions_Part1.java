@@ -195,28 +195,150 @@ public class InterviewQuestions_Part1 {
 		}
 
 	}
-	
-	//write a program to check whether the number is Armstrong number or not.
+
+	// write a program to check whether the number is Armstrong number or not.
 	// 153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
 	public static void checkArmstrongNumber(int number) {
-		
+
 		int tempNum = number;
 		int sum = 0;
-		
+
 		while (tempNum > 0) {
 			int remainder = tempNum % 10;
-			sum = sum + (remainder*remainder*remainder); // 27,  27 + 125 = 152, 1 + 152 = 153
-			tempNum = tempNum / 10; 
+			sum = sum + (remainder * remainder * remainder); // 27, 27 + 125 = 152, 1 + 152 = 153
+			tempNum = tempNum / 10;
 		}
-		
-		if(sum == number) {
-			System.out.println(number+" Number is an Armstrong Number");
-		}else {
-			System.out.println(number+" Number is not an Armstrong Number");
+
+		if (sum == number) {
+			System.out.println(number + " Number is an Armstrong Number");
+		} else {
+			System.out.println(number + " Number is not an Armstrong Number");
 		}
-		
+
+	}
+
+	// write a program to sort the Array
+	// Ex: {11,5,8,2,6} -> {2,5,6,8,11)
+	// -> {11,8,6,5,2}
+	public static void sortIntArray(int[] intArr) {
+
+//		1st -> 0 -> 5 11 8 2 6 -> 2 11 8 5 6
+//		2nd -> 1->  2 8 11 5 6 -> 2 5 11 8 6 
+//		3rd -> 2 -> 2 5 11 8 6 -> 2 5 8 11 6 -> 2 5 6 11 8
+//		4th -> 3 -> 2 5 6 11 8 -> 2 5 6 8 11
+
+		for (int i = 0; i < intArr.length; i++) {
+			for (int j = i + 1; j < intArr.length; j++) {
+				if (intArr[i] < intArr[j]) { // Ascending Order
+//				if (intArr[i] < intArr[j]) {  // Descending order
+					int tempNum = intArr[i];
+					intArr[i] = intArr[j];
+					intArr[j] = tempNum;
+				}
+			}
+		}
+
+		for (int i = 0; i < intArr.length; i++) {
+			System.out.print(intArr[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	// Write a reusable method to print a word in a ascending order/ alphabetical
+	// order
+	// java -> aajv
+	// hello -> ehllo
+	public static void sortString(String str) {
+
+		char ch = 'A';
+		int int1 = ch;
+		ch = (char) int1;
+
+		char[] charArr = str.toCharArray();
+
+		for (int i = 0; i < charArr.length; i++) {
+			for (int j = i + 1; j < charArr.length; j++) {
+				if (charArr[i] > charArr[j]) { // Ascending Order
+//				if (charArr[i] > charArr[j]) {  // Descending order
+					char tempChar = charArr[i];
+					charArr[i] = charArr[j];
+					charArr[j] = tempChar;
+				}
+			}
+		}
+
+		for (int i = 0; i < charArr.length; i++) {
+			System.out.print(charArr[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	// Write a program to reverse a string without changing the words position
+	// Hello Java World -> olleH avaJ dlroW
+	public static void reverseStringWithoutChaingWordsPostion(String str) {
+		String[] strArr = str.split(" ");
+		String revStr = "";
+
+		for (String eachWord : strArr) {
+			String tempRevStr = "";
+			for (char eachChar : eachWord.toCharArray()) {
+				tempRevStr = eachChar + tempRevStr;
+			}
+
+			revStr = revStr + tempRevStr + " ";
+		}
+		System.out.println(revStr);
+	}
+
+	// Write a program to print right half triangle
+	public static void printRightHalfTaingle() {
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*" + " ");
+			}
+			System.out.println("");
+		}
+	}
+
+	// Write a program to print right half triangle
+	public static void printRightHalfTaingleInReverse() {
+		for (int i = 5; i >= 1; i--) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*" + " ");
+			}
+			System.out.println("");
+		}
+	}
+
+	// Write a program to print right half triangle
+	public static void printLeftHalfTaingle() {
+
+		for (int i = 5; i >= 1; i--) {
+			for (int k = 1; k <= i; k++) {
+				System.out.print(" ");
+			}
+
+			for (int j = 1; j <= 6 - i; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
 	}
 	
+	// Write a program to print right half triangle
+		public static void printLeftHalfTaingleInReverse() {
+
+			for (int i = 1; i <= 5; i++) {
+				for (int k = 1; k <= i; k++) {
+					System.out.print(" ");
+				}
+
+				for (int j = 1; j <= 6-i; j++) {
+					System.out.print("*");
+				}
+				System.out.println("");
+			}
+		}
 
 	public static void main(String[] args) {
 
@@ -242,8 +364,32 @@ public class InterviewQuestions_Part1 {
 //		checkNumberPalindrome(121);
 
 //		checkStringPalindrome("malayalam");
+
+//		checkArmstrongNumber(153);
+
+//		int[] intArr = { 11, 5, 8, 2, 6 };
+//		sortIntArray(intArr);
+
+//		sortString("java");
+//		sortString("hello");
+
+//		reverseString("Hello Java World");
+//		reverseStringWithoutChaingWordsPostion("Hello Java World");
+
+		printRightHalfTaingle();
+
+		System.out.println(" ");
+
+		printRightHalfTaingleInReverse();
+
+		System.out.println(" ");
+
+		printLeftHalfTaingle();
 		
-		checkArmstrongNumber(153);
+		System.out.println(" ");
+		
+		printLeftHalfTaingleInReverse();
+
 	}
 
 }
