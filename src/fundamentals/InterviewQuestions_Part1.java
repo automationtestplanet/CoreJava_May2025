@@ -324,21 +324,21 @@ public class InterviewQuestions_Part1 {
 			System.out.println("");
 		}
 	}
-	
+
 	// Write a program to print right half triangle
-		public static void printLeftHalfTaingleInReverse() {
+	public static void printLeftHalfTaingleInReverse() {
 
-			for (int i = 1; i <= 5; i++) {
-				for (int k = 1; k <= i; k++) {
-					System.out.print(" ");
-				}
-
-				for (int j = 1; j <= 6-i; j++) {
-					System.out.print("*");
-				}
-				System.out.println("");
+		for (int i = 1; i <= 5; i++) {
+			for (int k = 1; k <= i; k++) {
+				System.out.print(" ");
 			}
+
+			for (int j = 1; j <= 6 - i; j++) {
+				System.out.print("*");
+			}
+			System.out.println("");
 		}
+	}
 
 	public static void main(String[] args) {
 
@@ -385,9 +385,9 @@ public class InterviewQuestions_Part1 {
 		System.out.println(" ");
 
 		printLeftHalfTaingle();
-		
+
 		System.out.println(" ");
-		
+
 		printLeftHalfTaingleInReverse();
 
 	}
