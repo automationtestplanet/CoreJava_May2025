@@ -3,7 +3,7 @@ package assignments.madhusudhan;
 public class Assignment2 {
 
 	
-	// Write a program to check two strings are anagrams or not
+	// Write a program to check two strings are anagrams/identical or not
 	// ex: "listen" and "silent" are anagrams
 	//		"race" and "care"  are anagrams
 	//		"act" and "cat" are anagrams
