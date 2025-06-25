@@ -38,12 +38,12 @@ public class OuterClass {
 		OuterClass outCls = new OuterClass();
 //		InnerInstanceClass insCls = new InnerInstanceClass();  // inner instance have to access by object only
 //		InnerStaticClass inStatCls = new InnerStaticClass();  // inner static can directly accessed
-		
+
 		OuterClass.InnerStaticClass innerStatiCls = new InnerStaticClass();
 		innerStatiCls.method2();
-		
+
 		OuterClass.InnerInstanceClass insCls = outCls.new InnerInstanceClass();
-		
+
 		insCls.method1();
 	}
 
