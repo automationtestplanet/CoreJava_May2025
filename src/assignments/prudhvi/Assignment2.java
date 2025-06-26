@@ -1,5 +1,4 @@
 package assignments.prudhvi;
-
 public class Assignment2 {
 	// Write program to print occurrences of each character in a string
 	// Ex: hello
@@ -21,7 +20,6 @@ public class Assignment2 {
 			System.out.println(ch[i] + " : " + c);
 		}
 	}
-
 	public static void main(String[] args) {
 		PrintCharacterCountInString("hello");
 	}
