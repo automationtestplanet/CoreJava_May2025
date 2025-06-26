@@ -8,7 +8,7 @@ public class Assignment2 {
 	// BCA -> 231
 	// HELLO -> 85121215
 
-	public static void AlphabetToNumber(String str) {
+	public static void alphabetToNumber(String str) {
 		char ch[] = str.toCharArray();
 		for (char eachChara: str.toCharArray()) {
 			int number = eachChara;
@@ -19,6 +19,6 @@ public class Assignment2 {
 	}
 
 	public static void main(String[] args) {
-		AlphabetToNumber("HELLO");
+		alphabetToNumber("HELLO");
 	}
 }
