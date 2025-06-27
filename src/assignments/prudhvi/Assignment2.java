@@ -3,7 +3,7 @@ public class Assignment2 {
 	// Write program to print occurrences of each character in a string
 	// Ex: hello
 	// o/p: h-1, e-1, l-2, o-1
-	public static void PrintCharacterCountInString(String str) {
+	public static void printOccurrencesOfEachCharacterInString(String str) {
 		String s = "hello";
 		char[] ch = s.toCharArray();
 		boolean[] b = new boolean[s.length()];
@@ -21,6 +21,6 @@ public class Assignment2 {
 		}
 	}
 	public static void main(String[] args) {
-		PrintCharacterCountInString("hello");
+		printOccurrencesOfEachCharacterInString("hello");
 	}
 }
