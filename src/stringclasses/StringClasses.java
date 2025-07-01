@@ -1,6 +1,8 @@
-package multithreading;
+package stringclasses;
 
-public class StringClass {
+import java.util.StringTokenizer;
+
+public class StringClasses {
 
 	public static void main(String[] args) throws Throwable {
 		String string1 = "Hello";				// String constant(Literals) pool
@@ -20,7 +22,7 @@ public class StringClass {
 		string3 = string3.concat(" Program");  // new object is referred by string3
 		System.out.println(string3);
 		
-		StringClass strCls = new StringClass();
+		StringClasses strCls = new StringClasses();
 		strCls.finalize();   // JVM always calls this method to clear the garbage (Unreferenced objects)
 		
 		
@@ -43,6 +45,17 @@ public class StringClass {
 		System.out.println(strBuffer);
 		System.out.println(strBuffer.reverse());
 		System.out.println(strBuffer);
+		
+		System.out.println("--------------------------------StringTokennizer--------------------");
+		StringTokenizer strTokens = new StringTokenizer("Hello Java World");
+		while(strTokens.hasMoreTokens()) {
+			System.out.println(strTokens.nextToken());
+		}
+		
+		while(strTokens.hasMoreElements()) {
+			System.out.println(strTokens.nextElement());
+		}
+
 
 	}
 

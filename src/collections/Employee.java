@@ -1,6 +1,6 @@
 package collections;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	private String empName;
 	private long empId;
 	private String empDept;
@@ -43,5 +43,15 @@ public class Employee {
 
 	public void setEmpSalary(long empSalary) {
 		this.empSalary = empSalary;
+	}
+
+	@Override
+	public int compareTo(Employee emp1) {
+		if(emp1.getEmpSalary() < this.getEmpSalary()) {
+			return 0;
+		}else {
+			return -1;
+		}
+		
 	}
 }

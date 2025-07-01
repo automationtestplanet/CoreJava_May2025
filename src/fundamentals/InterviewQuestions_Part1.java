@@ -376,19 +376,23 @@ public class InterviewQuestions_Part1 {
 //		reverseString("Hello Java World");
 //		reverseStringWithoutChaingWordsPostion("Hello Java World");
 
-		printRightHalfTaingle();
-
-		System.out.println(" ");
-
-		printRightHalfTaingleInReverse();
-
-		System.out.println(" ");
-
-		printLeftHalfTaingle();
-
-		System.out.println(" ");
-
-		printLeftHalfTaingleInReverse();
+//		printRightHalfTaingle();
+//
+//		System.out.println(" ");
+//
+//		printRightHalfTaingleInReverse();
+//
+//		System.out.println(" ");
+//
+//		printLeftHalfTaingle();
+//
+//		System.out.println(" ");
+//
+//		printLeftHalfTaingleInReverse();
+		
+		String str = "hello java";
+		System.out.println(str.replace('l','$'));
+		System.out.println(str.replaceAll("l","\\$"));
 
 	}
 

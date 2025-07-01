@@ -1,5 +1,6 @@
 package functionalinterfaces;
 
+import java.util.Comparator;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
@@ -96,6 +97,17 @@ public class PredefinedFunctionalInterafces {
 		
 		BinaryOperator<Integer> binaryOperaotor2 = (val1,val2)-> val1+val2;
 		System.out.println(binaryOperaotor2.apply(100, 200));
+		
+		System.out.println("---------------------------Comparator--------------------");
+		Comparator<Integer> comparator1 = new Comparator<Integer>() {			
+			@Override
+			public int compare(Integer o1, Integer o2){
+				if(o1 > o2) return 0 ;
+				else return -1;
+			}
+		};
+		
+		Comparator<Integer> comparator2 = (obj1,obj2) -> {if(obj1 > obj2) return 0;else return -1;};
 
 	}
 
